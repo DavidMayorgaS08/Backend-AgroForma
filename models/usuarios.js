@@ -3,10 +3,10 @@ import moongose from 'mongoose';
 const usuariosSchema = new moongose.Schema({
     Nombre: { type: String, required: true },
     Apellido: { type: String, required: true },
-    Documento: { type: String, required: true, unique: true },
+    Documento: { type: String, required: true },
     Telefono: { type: String, required: true },
     Direccion: { type: String, required: true },
-    Email: { type: String, required: true, unique: true },
+    Email: { type: String, required: true },
     Password: { type: String, required: true },
     Municipio: { type: String, required: true },
     Rol: { type: String, enum: ['adminFull', 'admin', 'trabajador'], required: true },
