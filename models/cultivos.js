@@ -7,7 +7,7 @@ const cultivosSchema = new mongoose.Schema({
     Id_parcela: { type: mongoose.Schema.Types.ObjectId, ref: 'Parcelas', required: true },
     Fecha_siembra: { type: Date, required: true },
     Variedad: { type: String, required: true },
-    Estado: { type: String, required: true },
+    Estado: { type: String, required: true, enum: ['Sembrado', 'Creciendo', 'Cosechado', 'Abandonado'] },
     Historial_modificacion: []
 });
 

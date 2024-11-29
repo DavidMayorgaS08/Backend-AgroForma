@@ -21,7 +21,7 @@ const analisisSuelosSchema = new mongoose.Schema({
             Sodio: { type: Number, required: true },
         }
     ],
-    Estado: { type: String, required: true }, // Preliminar, Finalizado, Revisado
+    Estado: { type: String, enum: ['Preliminar', 'Finalizado', 'Revisado'], required: true },
     Historial_modificaciones: []
 });
 
