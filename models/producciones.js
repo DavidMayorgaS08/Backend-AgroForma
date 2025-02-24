@@ -7,6 +7,7 @@ const produccionesSchema = new mongoose.Schema({
     NroLote: { type: String, required: true },
     Especie: { type: String, required: true },
     Cantidad: { type: Number, required: true },
+    Unidad: { type: String, required: true },
     Cantidad_trabajadores: { type: Number, required: true },
     Observaciones: { type: String },
     Estado_produccion: { type: String, enum: ['En curso', 'Completado', 'Cancelado'], required: true },
