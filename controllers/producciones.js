@@ -4,14 +4,16 @@ const produccionesControllers = {
     // Listar todas las producciones
     async getProducciones(req, res) {
         try {
-            const producciones = await Producciones.find();
-            res.json(producciones);
+          const producciones = await Producciones.find().populate({
+            path: "Id_cultivo",
+          });
+          res.json(producciones);
         } catch (error) {
-            res.status(500).json({
-                message: error.message
-            });
+          res.status(500).json({
+            message: error.message
+          });
         }
-    },
+      },
     // Listar producciones por id
     async getProduccion(req, res) {
         try {
