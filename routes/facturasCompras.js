@@ -49,7 +49,7 @@ router.put('/:id',[
     check('id').custom(facturasComprasHelpers.validarId),
     check('Id_finca', 'El Id_finca es obligatorio').isMongoId(),
     check('Id_finca').custom(facturasComprasHelpers.validarIdFinca),
-    check('fecha_factura', 'La fecha de la factura es obligatoria').isDate(),
+    check('Fecha_factura', 'La fecha de la factura es obligatoria').isDate(),
     check('Id_proveedor', 'El Id_proveedor es obligatorio').isMongoId(),
     check('Id_proveedor').custom(facturasComprasHelpers.validarIdProveedor),
     check('Detalle_compra', 'El Detalle_compra es obligatorio').isArray({ min: 1 }),
