@@ -5,6 +5,7 @@ import cors from 'cors';
 
 import login from './routes/login.js';
 import analisisSuelos from './routes/analisisSuelos.js';
+import climas from './routes/climas.js';
 import compradores from './routes/compradores.js';
 import controlPlagas from './routes/controlPlagas.js';
 import cultivos from './routes/cultivos.js';
@@ -42,6 +43,7 @@ app.use(express.json());
 
 app.use('/login', login);
 app.use('/analisis-suelos', analisisSuelos);
+app.use('/climas', climas);
 app.use('/compradores', compradores);
 app.use('/control-plagas', controlPlagas);
 app.use('/cultivos', cultivos);
