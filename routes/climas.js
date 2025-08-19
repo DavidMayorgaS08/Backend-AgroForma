@@ -17,12 +17,12 @@ router.post('/', [
     validarJWT,
     check('Id_finca', 'El Id_finca es obligatorio').isMongoId(),
     check('Id_finca').custom(climasHelpers.validarIdFinca),
-    check('Temperatura', 'La Temperatura es obligatoria').isNumeric(),
+    check('Temperatura', 'La Temperatura es obligatoria').notEmpty(),
     check('Clima', 'El Clima es obligatorio').notEmpty(),
     check('Fecha', 'La Fecha es obligatoria').isISO8601(),
-    check('Humedad', 'La Humedad es obligatoria').isNumeric(),
-    check('Velocidad_viento', 'La Velocidad_viento es obligatoria').isNumeric(),
-    check('Nubosidad', 'La Nubosidad es obligatoria').isNumeric(),
+    check('Humedad', 'La Humedad es obligatoria').notEmpty(),
+    check('Velocidad_viento', 'La Velocidad_viento es obligatoria').notEmpty(),
+    check('Nubosidad', 'La Nubosidad es obligatoria').notEmpty(),
     validarCampos
 ], climasControllers.createClima);
 
